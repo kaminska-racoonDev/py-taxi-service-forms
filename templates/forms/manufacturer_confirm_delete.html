@@ -6,6 +6,8 @@
     <p><i>When deleted, any car by {{ manufacturer }} will be DELETED as well!</i></p>
     <form action="" method="post">
         {% csrf_token %}
+
+        <a class="btn btn-secondary" href="{% url 'taxi:manufacturer-list' %}">CANCEL</a>
         <input type="submit" value="Yes, delete" class="btn btn-danger" />
     </form>
 {% endblock content %}
